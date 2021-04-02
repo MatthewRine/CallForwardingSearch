@@ -10,7 +10,17 @@
   function openSearchResults(){
     var provider = document.getElementById("provider_input").value;
     var url = "https://www.google.com/search?q="+provider+"+call+forwarding"
-    window.open(url)
+    window.open(url);
+    sendWebhook(provider);
+  }
+  function sendWebhook(name){
+    fetch('https://hooks.zapier.com/hooks/catch/6612919/oji03ix/', {
+  method: 'POST', // or 'PUT'
+
+  body: JSON.stringify({
+    provider: name,
+  })
+})
   }
   document.getElementById("search").addEventListener("click", openSearchResults);
 </script>
