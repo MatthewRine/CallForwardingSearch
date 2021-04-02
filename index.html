@@ -1,1 +1,16 @@
-<h1>Hello world!</h1>
+<h1>Call Forwarding Instructions Search</h1>
+<p>Enter a provider to search for Call Forwarding instructions</p>
+<br>
+<input id="provider_input"></input>
+<button id="search">Search</button>
+
+
+<script>
+  function openSearchResults(){
+    var provider = document.getElementById("provider_input").value;
+    var url = "https://www.google.com/search?q="+provider+"+call+forwarding"
+    window.open()
+  }
+  
+  document.getElementByID("search").addEventListener("click", openSearchResults);
+</script>
