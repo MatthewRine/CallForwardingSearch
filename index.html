@@ -3,14 +3,18 @@
 <br>
 <input id="provider_input"></input>
 <button id="search">Search</button>
-
-
 <script>
   function openSearchResults(){
     var provider = document.getElementById("provider_input").value;
     var url = "https://www.google.com/search?q="+provider+"+call+forwarding"
     window.open(url)
   }
-  
   document.getElementById("search").addEventListener("click", openSearchResults);
 </script>
+<style>
+  body{
+    font-family: sans-serif;
+    max-width: 500px;
+    mrgin: auto;
+  }
+</style>
